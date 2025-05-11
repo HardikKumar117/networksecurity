@@ -1,0 +1,4 @@
+numpy>=2.2.5
+pandas>=2.2.3
+python-dotenv>=1.1.0
+setuptools>=80.4.0
