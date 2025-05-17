@@ -46,7 +46,7 @@ class NetworkDataExtraction():
             raise NetworkSecurityException(e,sys)
             
 if __name__=="__main__":
-    FILE_PATH="network_data\Phishing_Legitimate_full.csv"
+    FILE_PATH="network_data\Phishing_Websites_Data.csv"
     DATABASE="HARDIK"
     COLLECTION="NETWORKDATA"
     
