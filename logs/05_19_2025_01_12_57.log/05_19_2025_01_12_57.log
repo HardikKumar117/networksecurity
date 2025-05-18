@@ -1,0 +1,15 @@
+[2025-05-19 01:13:02,404] 15 root-INFO-initiate data ingestion
+[2025-05-19 01:13:08,838] 48 root-INFO-Performed train test split
+[2025-05-19 01:13:08,838] 49 root-INFO-Exited the split_data_train_test method of DataIngestion class
+[2025-05-19 01:13:08,838] 52 root-INFO-Exporting train and test file path
+[2025-05-19 01:13:08,900] 55 root-INFO-Exported data to training and testing path 
+[2025-05-19 01:13:08,908] 20 root-INFO-initiate the data validation
+[2025-05-19 01:13:08,997] 30 root-INFO-required number of columns2
+[2025-05-19 01:13:08,997] 31 root-INFO-Dataframe has columns:31
+[2025-05-19 01:13:08,997] 30 root-INFO-required number of columns2
+[2025-05-19 01:13:08,997] 31 root-INFO-Dataframe has columns:31
+[2025-05-19 01:13:09,145] 79 root-INFO-Drift report written to: Artifacts\05_19_2025_01_13_02\data_validation\drift_report\report.yaml
+[2025-05-19 01:13:09,202] 22 root-INFO-data validation is completed
+[2025-05-19 01:13:09,202] 41 root-INFO-Entering data transformation method
+[2025-05-19 01:13:09,202] 43 root-INFO-Started the transformation
+[2025-05-19 01:13:09,301] 32 root-INFO-Entered the Get_transformer method of the DataTransformation class
