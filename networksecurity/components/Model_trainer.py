@@ -15,6 +15,9 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.ensemble import AdaBoostClassifier,RandomForestClassifier,GradientBoostingClassifier
 
+import dagshub
+dagshub.init(repo_owner='HardikKumar117', repo_name='networksecurity', mlflow=True)
+
 class ModelTrainer:
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
         try:
@@ -106,9 +109,11 @@ class ModelTrainer:
         preprocessor=load_object(self.data_transformation_artifact.transformed_object_file_path)
         dir_name=os.path.dirname(self.model_trainer_config.model_trainer_file_path)
         os.makedirs(dir_name,exist_ok=True)
+        save_object("final_models/preprocessor.pkl",preprocessor)
         
         network_model=NetworkModel(processor=preprocessor,model=best_model)
         save_object(self.model_trainer_config.model_trainer_file_path,network_model)
+        save_object("final_models/model.pkl",best_model)
         model_trainer_artifact=ModelTrainerArtifact(trained_model_file_path=self.model_trainer_config.model_trainer_file_path,
                              test_metric_artifact=train_classification_artifact,
                              trained_metric_artifact=test_classification_artifact)

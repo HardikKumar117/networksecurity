@@ -29,7 +29,7 @@ class DataIngestion:
         df=pd.DataFrame(list(collection.find()))
         if "_id" in df.columns:
             df.drop(columns=["_id"],inplace=True,axis=1)
-            df.replace({"na",np.nan},inplace=True)
+            df.replace("na", np.nan, inplace=True)
             return df
     
     def export_data_to_feature_store(self,dataframe:pd.DataFrame):
