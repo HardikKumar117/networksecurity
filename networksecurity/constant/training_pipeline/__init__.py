@@ -40,5 +40,11 @@ DATA_TRANSFORMATION_IMPUTER_PARAMS:dict={
 "n_neighbors":3,
 "weights":"uniform",
 }
-
+'''----MODEL TRAINING CONSTANTS----'''
+MODEL_TRAINER_DIR:str="trained_model"
+MODEL_TRAINER_TRAINED_MODEL_FILE_PATH:str="model.pkl"
+MODEL_TRAINER_EXPECTED_ACCURACY:float=0.6
+MODEL_TRAINER_OVERFITTING_UNDERFITTING_THRESHOLD:float=0.05
+SAVED_MODEL_DIR:str=os.path.join("saved_models")
+MODEL_FILE_NAME:str="model.pkl"
 

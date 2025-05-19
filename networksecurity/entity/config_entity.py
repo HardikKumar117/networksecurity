@@ -55,6 +55,11 @@ class DataTransformationConfig:
                                                      training_pipeline.PREPROCESSOR_OBJECT_FILE_PATH)
 
 
-
+class ModelTrainerConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.model_trainer_dir=os.path.join(training_pipeline_config.artifact_dir,training_pipeline.MODEL_TRAINER_DIR)
+        self.model_trainer_file_path=os.path.join(self.model_trainer_dir,training_pipeline.MODEL_TRAINER_DIR,training_pipeline.MODEL_TRAINER_TRAINED_MODEL_FILE_PATH)
+        self.expected_accuracy:float=training_pipeline.MODEL_TRAINER_EXPECTED_ACCURACY
+        self.overfitting_underfitting_threshold=training_pipeline.MODEL_TRAINER_OVERFITTING_UNDERFITTING_THRESHOLD
 
 
